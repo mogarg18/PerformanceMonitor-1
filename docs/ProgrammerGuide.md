@@ -340,10 +340,10 @@ To extend the lines in the graph, the Plotly.extendTraces method is used. It is 
 Plotly.extendTraces('cpu', update, [0]);
 ```
 
-To show only the most relevant data, the last 15 minutes are shown on the graph. This is done by the Plotly.relayout method. Once again, this method is passed 'cpu' (div in which the graph will be shown), and minuteView (array specifying the time range which the graph should display).
+To show only the most relevant data, the last 100 data points are shown on the graph. This is done by the Plotly.relayout method. Once again, this method is passed 'cpu' (div in which the graph will be shown), and relevantPoints (array specifying the time range which the graph should display). The amount of data points can be changed by adjusting the pointsOnGraph variable in CPU_Memory.cshtml.cs.
 
 ```cs
-Plotly.relayout('cpu', minuteView);
+Plotly.relayout('cpu', relevantPoints);
 ```
 
 #### Data Analysis
